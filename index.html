@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Safeek S — Senior Software Engineer with 9+ years of experience building scalable, distributed backend systems in Golang, Node.js and Python." />
+<title>Safeek S // Senior Software Engineer</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="icon" type="image/png" sizes="128x128" href="favicon-128.png" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="favicon-128.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="cyberpunk">
+
+<canvas id="grid-bg"></canvas>
+<div class="scanlines"></div>
+
+<nav class="nav">
+  <a href="#hero" class="nav-brand" aria-label="Home">
+    <span class="brand-name">Safeek</span>
+    <span class="brand-smile" aria-hidden="true">:)</span>
+  </a>
+  <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="primary-nav">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#" data-open-resume aria-label="View resume">Resume</a></li>
+  </ul>
+  <div class="theme-switcher" role="tablist" aria-label="Theme">
+    <button class="theme-btn active" data-set-theme="cyberpunk" title="Cyberpunk / Neon" aria-label="Cyberpunk theme">
+      <span class="swatch-cyber"></span>
+    </button>
+    <button class="theme-btn" data-set-theme="space" title="Space / Cosmic" aria-label="Space theme">
+      <span class="swatch-space"></span>
+    </button>
+    <button class="theme-btn" data-set-theme="glass" title="Glassmorphism / Bento" aria-label="Glass theme">
+      <span class="swatch-glass"></span>
+    </button>
+    <button class="theme-btn" data-set-theme="terminal" title="Terminal / Dev-first" aria-label="Terminal theme">
+      <span class="swatch-term"></span>
+    </button>
+    <button class="theme-btn" data-set-theme="aquarium" title="Aquarium / Ocean" aria-label="Aquarium theme">
+      <span class="swatch-aqua"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-name glitch" data-text="SAFEEK S">SAFEEK S</h1>
+    <h2 class="hero-role">
+      <span class="prompt">&gt;</span>
+      <span id="typewriter"></span><span class="caret">_</span>
+    </h2>
+    <p class="hero-tag">
+      Building scalable, distributed backend systems for
+      <span class="accent">EV charging</span>,
+      <span class="accent">energy grids</span> and
+      <span class="accent">real-time platforms</span>.
+    </p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-target="9">0</span><span class="stat-plus">+</span><span class="stat-label">years</span></div>
+      <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-label">major platforms</span></div>
+      <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">domains served</span></div>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">view_projects()</a>
+      <a href="#contact" class="btn btn-outline">contact_me()</a>
+      <a href="#" class="btn btn-outline" data-open-resume>resume()</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">// about_me</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I started out at a product engineering shop in Coimbatore back in 2017,
+        shipping backends for whatever landed on the desk — an
+        <span class="accent">online exam platform</span> for a US university one quarter, a
+        <span class="accent">farm management SaaS</span> the next, a
+        <span class="accent">food delivery gateway</span> after that. Bouncing between domains
+        taught me that systems fail in very different ways depending on what they move.
+      </p>
+      <p>
+        In 2023 I joined Magenta Mobility and got my first taste of talking to real hardware —
+        thousands of EV chargers spread across cities, all chattering over
+        <span class="accent">OCPP</span>. When something breaks in production it isn't a bug,
+        it's a truck sitting cold at a charging bay. That's when I got hooked on real-time,
+        distributed systems for a living.
+      </p>
+      <p>
+        Since then it's mostly been EV and energy infrastructure. Nearly two years at
+        <span class="accent">JioBP</span> designing the operator control plane for one of
+        India's largest charging networks — remote actions, Auto-Charging, OCPP over WebSockets.
+        Now freelancing with a Swedish team on grid stabilization: same shape of problem, new domain.
+      </p>
+      <p>
+        If you're building distributed systems where message timing actually matters —
+        real hardware, real money, real people waiting — I'd like to hear about it.
+      </p>
+    </div>
+    <div class="about-card">
+
+      <!-- OPTION 1 — Ask me about -->
+      <div class="about-interactive" id="askme-block">
+        <div class="interactive-label"># ask me about</div>
+        <div class="askme-pills">
+          <button type="button" class="pill" data-topic="ocpp">OCPP</button>
+          <button type="button" class="pill" data-topic="golang">Golang</button>
+          <button type="button" class="pill" data-topic="realtime">Real-time</button>
+          <button type="button" class="pill" data-topic="ev">EV Charging</button>
+          <button type="button" class="pill" data-topic="distributed">Distributed Systems</button>
+          <button type="button" class="pill" data-topic="incidents">Incident Response</button>
+        </div>
+        <div class="askme-answer" id="askme-answer">
+          <p class="askme-hint">Tap to hear the story.</p>
+        </div>
+      </div>
+
+      <!-- OPTION 2 — Journey timeline -->
+      <div class="about-interactive" id="journey-block">
+        <div class="interactive-label"># journey</div>
+        <div class="journey-track">
+          <button type="button" class="journey-dot" data-chapter="0">
+            <span class="dot-year">2017</span>
+            <span class="dot-label">OntoBorn</span>
+          </button>
+          <button type="button" class="journey-dot" data-chapter="1">
+            <span class="dot-year">2023</span>
+            <span class="dot-label">Magenta</span>
+          </button>
+          <button type="button" class="journey-dot" data-chapter="2">
+            <span class="dot-year">2024</span>
+            <span class="dot-label">JioBP</span>
+          </button>
+          <button type="button" class="journey-dot active" data-chapter="3">
+            <span class="dot-year">2026</span>
+            <span class="dot-label">Truxel</span>
+          </button>
+        </div>
+        <div class="journey-chapter" id="journey-chapter"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">// tech_stack</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3 class="skill-cat">Languages</h3>
+      <div class="skill-tags">
+        <span class="tag">Golang</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">Java</span>
+        <span class="tag">Shell</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3 class="skill-cat">Backend</h3>
+      <div class="skill-tags">
+        <span class="tag">Node.js</span>
+        <span class="tag">gRPC</span>
+        <span class="tag">Protobuf</span>
+        <span class="tag">REST</span>
+        <span class="tag">Microservices</span>
+        <span class="tag">Event-Driven</span>
+        <span class="tag">System Design</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3 class="skill-cat">Real-Time & Messaging</h3>
+      <div class="skill-tags">
+        <span class="tag">Kafka</span>
+        <span class="tag">Redis Pub/Sub</span>
+        <span class="tag">MQTT</span>
+        <span class="tag">OCPP</span>
+        <span class="tag">WebSockets</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3 class="skill-cat">Databases</h3>
+      <div class="skill-tags">
+        <span class="tag">MongoDB</span>
+        <span class="tag">Postgres</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Redis</span>
+        <span class="tag">Elasticsearch</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3 class="skill-cat">Cloud & DevOps</h3>
+      <div class="skill-tags">
+        <span class="tag">AWS</span>
+        <span class="tag">Docker</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Git</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3 class="skill-cat">Observability</h3>
+      <div class="skill-tags">
+        <span class="tag">Prometheus</span>
+        <span class="tag">Grafana</span>
+        <span class="tag">OpenTelemetry</span>
+        <span class="tag">Kibana</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3 class="skill-cat">Frontend</h3>
+      <div class="skill-tags">
+        <span class="tag">React.js</span>
+        <span class="tag">Angular</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">// experience.log</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">May 2026 – Present</div>
+        <h3 class="timeline-role">Freelance Backend Consultant</h3>
+        <div class="timeline-company">Binary Cube Technologies · Client: Truxel, Sweden</div>
+        <ul class="timeline-bullets">
+          <li>Contributing to a Python-based energy grid stabilization platform for real-time monitoring and control of distributed energy sites.</li>
+          <li>Redesigning service topology from per-site (3 dedicated) to a <span class="accent">shared multi-tenant</span> model — cutting duplication and simplifying deployment as new sites onboard.</li>
+          <li>Processing real-time energy telemetry and coordinating operations across distributed sites.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">Nov 2024 – May 2026</div>
+        <h3 class="timeline-role">Senior Software Engineer</h3>
+        <div class="timeline-company">Tata Elxsi / Tech Mahindra · Client: JioBP</div>
+        <ul class="timeline-bullets">
+          <li>Designed backend for the JioBP EV charging platform in <span class="accent">Golang, Node.js and Angular</span>, enabling remote charger control across the network.</li>
+          <li>Introduced Redis caching + Pub/Sub in the OCPP service — significant latency reduction and real-time coordination across service instances.</li>
+          <li>Designed and shipped the <span class="accent">Auto-Charging</span> feature, automating the end-to-end charging workflow.</li>
+          <li>Built OCPP-over-WebSocket communication with hundreds of charging stations.</li>
+          <li>Owned UAT/QA/Production infra + CI/CD for automated, zero-downtime releases.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">Jan 2023 – Nov 2024</div>
+        <h3 class="timeline-role">Golang Developer</h3>
+        <div class="timeline-company">Magenta Mobility · Bengaluru</div>
+        <ul class="timeline-bullets">
+          <li>Built scalable Golang + MongoDB backend services for an EV fleet & charging management platform.</li>
+          <li>Built an <span class="accent">OCPP log management system</span> to monitor high-volume real-time transactions between charge points and CMS.</li>
+          <li>Shipped the Charge Grid Dashboard in React.js — reports and interactive visualizations for fleet operations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">Jun 2017 – Dec 2022</div>
+        <h3 class="timeline-role">Senior Software Engineer</h3>
+        <div class="timeline-company">OntoBorn Technologies · Coimbatore</div>
+        <ul class="timeline-bullets">
+          <li><span class="accent">Swiggy</span> — Built a Golang gateway for CMS request/response processing; low-latency gRPC service-to-service comms; Prometheus + Grafana monitoring on Docker.</li>
+          <li><span class="accent">Essential Skills (Ohio State Univ.)</span> — Online exam features (quizzes, timed tests) with React, Golang APIs, MySQL; optimized slow queries under high concurrent load.</li>
+          <li><span class="accent">PoultryPro</span> — SaaS farm management: system architecture, Golang APIs, MySQL, React.js frontend.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">// education</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-date">2013 – 2017</div>
+      <h3 class="edu-degree">B.E. Computer Science</h3>
+      <div class="edu-school">KGiSL Institute of Technology</div>
+      <div class="edu-loc">Coimbatore, India</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-date">2001 – 2013</div>
+      <h3 class="edu-degree">School (Class I – XII)</h3>
+      <div class="edu-school">Srinivasa Vidhyalaya Matriculation Higher Secondary School</div>
+      <div class="edu-loc">Udumalpet, India</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">// projects.db</h2>
+  </div>
+  <div class="projects-grid">
+
+    <article class="project-card">
+      <div class="project-header">
+        <span class="project-id">#001</span>
+        <span class="project-year">2024 – 2026</span>
+      </div>
+      <h3 class="project-title">
+        <span class="project-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </span>
+        JioBP Pulse — EV Charging Platform
+      </h3>
+      <p class="project-tagline">India's largest EV network → real-time charger orchestration</p>
+      <p class="project-desc">
+        <a href="https://jiobppulsecharge.in" target="_blank" rel="noopener" class="inline-link">Jio-bp Pulse</a>
+        is one of India's largest EV fast-charging networks — <span class="accent">7,000+ charge points</span>
+        across 10+ cities with DC fast chargers up to 480kW.
+      </p>
+      <p class="project-desc">
+        I designed and built the backend that lets operators <span class="accent">remotely trigger charger
+        actions</span> and manage station configurations across the entire network. I shipped the end-to-end
+        <span class="accent">Auto-Charging feature</span> that automates the driver charging workflow and
+        optimized the OCPP service with Redis caching + Pub/Sub for real-time coordination across service
+        instances. I also owned UAT/QA/Production infra and CI/CD, supporting automated zero-downtime releases.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Golang</span><span class="tag">Node.js</span><span class="tag">Redis</span><span class="tag">OCPP</span><span class="tag">WebSockets</span><span class="tag">Angular</span>
+      </div>
+      <a href="https://jiobppulsecharge.in" target="_blank" rel="noopener" class="project-link">visit site ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-header">
+        <span class="project-id">#002</span>
+        <span class="project-year">2026 – Present</span>
+      </div>
+      <h3 class="project-title">
+        <span class="project-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </span>
+        Truxel Reflex — Energy Grid Stabilization
+      </h3>
+      <p class="project-tagline">Grid stabilization for distributed energy sites (Sweden)</p>
+      <p class="project-desc">
+        Contributing to <a href="https://reflex.truxco.energy" target="_blank" rel="noopener" class="inline-link">Truxel Reflex</a>,
+        a Python-based energy grid stabilization platform for a Swedish client — real-time monitoring
+        and control of distributed energy sites.
+      </p>
+      <p class="project-desc">
+        I'm redesigning the platform's service topology from a per-site model
+        (3 dedicated services per site) to a <span class="accent">shared multi-tenant model</span>
+        (3 shared services across all sites) — cutting duplication, simplifying deployment and
+        lowering operational overhead as new sites onboard. Backend services process real-time
+        energy telemetry and coordinate operations across distributed sites.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Python</span><span class="tag">Multi-Tenant</span><span class="tag">Real-Time</span><span class="tag">Telemetry</span>
+      </div>
+      <a href="https://reflex.truxco.energy" target="_blank" rel="noopener" class="project-link">visit site ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-header">
+        <span class="project-id">#003</span>
+        <span class="project-year">2023 – 2024</span>
+      </div>
+      <h3 class="project-title">
+        <span class="project-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </span>
+        Magenta Mobility — Charge Grid
+      </h3>
+      <p class="project-tagline">30K+ EV deliveries/day → fleet + charging orchestration</p>
+      <p class="project-desc">
+        <a href="https://www.magentamobility.com" target="_blank" rel="noopener" class="inline-link">Magenta Mobility</a>
+        operates a 100% electric last-mile delivery fleet across India — <span class="accent">30,000+ deliveries per day</span>,
+        30M+ km covered with zero emissions.
+      </p>
+      <p class="project-desc">
+        I built scalable Golang + MongoDB backend services for their EV fleet and charging management
+        platform. I designed an <span class="accent">OCPP log management system</span> that tracks
+        high-volume, real-time transactions between charge points and the central management system. I
+        also shipped the <span class="accent">Charge Grid Dashboard</span> in React.js, giving fleet
+        operators reports and interactive visualizations for daily operations.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Golang</span><span class="tag">MongoDB</span><span class="tag">React.js</span><span class="tag">OCPP</span>
+      </div>
+      <a href="https://www.magentamobility.com" target="_blank" rel="noopener" class="project-link">visit site ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-header">
+        <span class="project-id">#004</span>
+        <span class="project-year">2017 – 2022</span>
+      </div>
+      <h3 class="project-title">
+        <span class="project-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+        </span>
+        Swiggy — CMS Gateway
+      </h3>
+      <p class="project-tagline">High-throughput gateway for CMS content orchestration</p>
+      <p class="project-desc">
+        <a href="https://www.swiggy.com" target="_blank" rel="noopener" class="inline-link">Swiggy</a> is
+        India's largest food delivery platform, serving millions of orders daily.
+      </p>
+      <p class="project-desc">
+        I built a Golang-based <span class="accent">gateway service</span> that handled CMS
+        request/response processing at scale and implemented low-latency <span class="accent">gRPC</span>
+        service-to-service communication for internal microservices. I set up
+        <span class="accent">Prometheus + Grafana</span> monitoring on Docker-based deployments for
+        full production observability.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Golang</span><span class="tag">gRPC</span><span class="tag">Protobuf</span><span class="tag">Docker</span><span class="tag">Prometheus</span>
+      </div>
+      <a href="https://www.swiggy.com" target="_blank" rel="noopener" class="project-link">visit site ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-header">
+        <span class="project-id">#005</span>
+        <span class="project-year">2017 – 2022</span>
+      </div>
+      <h3 class="project-title">
+        <span class="project-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </span>
+        Essential Skills — LMS
+      </h3>
+      <p class="project-tagline">Online examinations for university-scale STEM courses</p>
+      <p class="project-desc">
+        A Learning Management System delivered to <span class="accent">Ohio State University</span>'s
+        STEM programs (<a href="https://stemfluency.org" target="_blank" rel="noopener" class="inline-link">stemfluency.org</a>).
+      </p>
+      <p class="project-desc">
+        I developed the online examination features — <span class="accent">timed quizzes</span>,
+        tests and grading — using React.js on the frontend, Golang APIs and MySQL for persistence.
+        When high concurrent load during exam windows exposed slow database queries, I investigated
+        and optimized them so responsiveness held up under peak traffic.
+      </p>
+      <div class="project-tags">
+        <span class="tag">React.js</span><span class="tag">Golang</span><span class="tag">MySQL</span><span class="tag">Perf Tuning</span>
+      </div>
+      <a href="https://stemfluency.org" target="_blank" rel="noopener" class="project-link">visit site ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-header">
+        <span class="project-id">#006</span>
+        <span class="project-year">2017 – 2022</span>
+      </div>
+      <h3 class="project-title">
+        <span class="project-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+            <line x1="16" y1="8" x2="2" y2="22"/>
+            <line x1="17.5" y1="15" x2="9" y2="15"/>
+          </svg>
+        </span>
+        PoultryPro+ — Farm Management SaaS
+      </h3>
+      <p class="project-tagline">Farm management for broiler & layer operators</p>
+      <p class="project-desc">
+        <a href="https://www.poultryproplus.com" target="_blank" rel="noopener" class="inline-link">PoultryPro+</a>
+        is a SaaS for poultry farmers — batch tracking, feed mill management, inventory alerts,
+        financials and vaccination reminders.
+      </p>
+      <p class="project-desc">
+        I contributed to the <span class="accent">system architecture</span> and core business logic,
+        built backend APIs in Golang with MySQL and shipped the React.js frontend. Delivered KPI
+        reporting, breed-standard comparisons and end-to-end financial workflows for farm operators.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Golang</span><span class="tag">MySQL</span><span class="tag">React.js</span><span class="tag">SaaS</span>
+      </div>
+      <a href="https://www.poultryproplus.com" target="_blank" rel="noopener" class="project-link">visit site ↗</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">// contact.init</h2>
+  </div>
+  <div class="contact-inner">
+    <h3 class="contact-heading">Let's build something.</h3>
+    <p class="contact-sub">
+      Open to senior backend / staff engineering roles, freelance contracts and
+      interesting problems in distributed systems, real-time platforms, or EV/energy.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:safeek70@gmail.com" class="contact-link">
+        <span class="contact-icon">✉</span>
+        <span class="contact-label">email</span>
+        <span class="contact-value">safeek70@gmail.com</span>
+      </a>
+      <a href="tel:+916384887010" class="contact-link">
+        <span class="contact-icon">☎</span>
+        <span class="contact-label">phone</span>
+        <span class="contact-value">+91 6384887010</span>
+      </a>
+      <a href="https://linkedin.com/in/safeek" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-icon">in</span>
+        <span class="contact-label">linkedin</span>
+        <span class="contact-value">/in/safeek</span>
+      </a>
+      <a href="https://www.instagram.com/__safeek/" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </span>
+        <span class="contact-label">instagram</span>
+        <span class="contact-value">@__safeek</span>
+      </a>
+      <a href="https://github.com/safeek-dev" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </span>
+        <span class="contact-label">github</span>
+        <span class="contact-value">@safeek-dev</span>
+      </a>
+      <a href="https://maps.google.com/?q=Coimbatore,India" target="_blank" rel="noopener" class="contact-link" id="location">
+        <span class="contact-icon">◉</span>
+        <span class="contact-label">location</span>
+        <span class="contact-value">Coimbatore, India</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Safeek S · Crafted with caffeine</p>
+</footer>
+
+<!-- RESUME PREVIEW MODAL -->
+<div class="resume-modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-hidden="true">
+  <div class="resume-modal-backdrop" data-close-resume></div>
+  <div class="resume-modal-panel" role="document">
+    <header class="resume-modal-header">
+      <span class="resume-modal-file" id="resume-modal-title">resume.pdf</span>
+      <div class="resume-modal-actions">
+        <a href="Safeek_S_Resume.pdf" download class="btn btn-primary resume-download-btn">download PDF ↓</a>
+        <button type="button" class="resume-modal-close" data-close-resume aria-label="Close resume preview">✕</button>
+      </div>
+    </header>
+
+    <div class="resume-modal-body resume-modal-body--pdf">
+      <iframe src="Safeek_S_Resume.pdf#view=FitH&toolbar=0" class="resume-pdf-frame" title="Safeek S — Resume PDF" loading="lazy">
+        <p style="padding:2rem;color:var(--text)">
+          Your browser can't render the PDF inline.
+          <a href="Safeek_S_Resume.pdf" download>Download the resume ↓</a>
+        </p>
+      </iframe>
+      <footer class="resume-modal-footer">
+        <a href="Safeek_S_Resume.pdf" download class="btn btn-primary">download PDF ↓</a>
+        <button type="button" class="btn btn-outline" data-close-resume>close</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="oneko.js"></script>
+</body>
+</html>
